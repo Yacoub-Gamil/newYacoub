@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+
+
+# npm package lock files (if you use yarn, replace with yarn.lock)
+package-lock.json
+
+# Environment variables (create your .env file for environment settings)
+.env
+
+# VSCode settings (if you're using VSCode)
+.vscode/
+
+
+# Windows installer files
+ehthumbs.db
