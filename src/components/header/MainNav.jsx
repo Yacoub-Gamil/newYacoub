@@ -9,7 +9,7 @@ const links = [
 
 function MainNav() {
   return (
-    <div className="hidden md:flex gap-6 text-xl">
+    <div className="hidden md:flex gap-6 text-xl capitalize">
       {links.map((link) => (
         <a key={link.href} href={link.href}>
           {link.linkName}

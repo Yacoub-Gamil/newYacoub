@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 body {
-  background: #212529;
+  background: #161616;
   font-family: "Kaushan Script", cursive;
   font-weight: 400;
   font-style: normal;
@@ -22,7 +22,7 @@ body {
   --color-white: #fff;
   --color-gray: #6c757d;
   --color-gray-dark: #343a40;
-  --color-primary: #007bff;
+  --color-primary: #161616;
   --color-secondary: #6c757d;
   --color-success: #28a745;
   --color-info: #17a2b8;
@@ -30,4 +30,5 @@ body {
   --color-danger: #dc3545;
   --color-light: #f8f9fa;
   --color-dark: #343a40;
+  --color-light-red: #fa8484;
 }

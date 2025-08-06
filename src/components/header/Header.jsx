@@ -3,20 +3,22 @@ import Logo from "./Logo";
 import MainNav from "./MainNav";
 import MenuNav from "./MenuNav";
 import gsap from "gsap";
+import { useRef } from "react";
 
 function Header() {
+  const headerRef = useRef(null);
   useGSAP(() => {
-    gsap.from("#header", {
+    gsap.from(headerRef.current, {
       opacity: 0,
-      delay: 5,
-      duration: 0.8,
-      y: -40,
-      ease: "power.in",
+      delay: 2,
+      duration: 1,
+      ease: "circ",
     });
   }, []);
+
   return (
-    <div id="header" className=" h-[15vh] text-white py-6">
-      <div className="flex items-center justify-between">
+    <div ref={headerRef} className=" text-white py-4 ">
+      <div className="flex items-center justify-between max-w-[80%] mx-auto">
         <Logo />
         <MainNav />
         <MenuNav />
