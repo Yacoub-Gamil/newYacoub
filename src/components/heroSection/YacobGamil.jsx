@@ -26,7 +26,7 @@ function YacobGamil() {
     <div className=" text-white mt-[3rem] md:mt-[8rem] text-center ">
       <h1
         id="yacoub"
-        className=" text-6xl md:text-8xl font-semibold capitalize"
+        className=" text-7xl md:text-8xl font-semibold  capitalize"
       >
         yacoub gamil
       </h1>

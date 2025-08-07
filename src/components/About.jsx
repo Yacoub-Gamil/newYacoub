@@ -1,6 +1,24 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 function About() {
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from("#about", {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "15% 90%",
+        toggleActions: "play reverse play reverse",
+      },
+      opacity: 0,
+      ease: "power1.in",
+      duration: 1.5,
+    });
+  }, []);
+
   return (
-    <section className=" text-white mt-[4rem]">
+    <section className=" text-white mt-[2rem] md:mt-[4rem] mb-6 md:mb-[8rem]">
       <div>
         <img
           src="about-img.png"
@@ -8,7 +26,7 @@ function About() {
           className=" absolute w-[10rem] md:w-[20rem] right-12 opacity-5 z-0"
         />
       </div>
-      <div className="">
+      <div id="about" className="">
         <div>
           <h1 className=" capitalize md:text-4xl mb-2">
             <span className=" text-xl">01.</span>about{" "}
@@ -38,9 +56,9 @@ function About() {
           </p>
         </div>
 
-        <div className=" mt-4 md:mt-[2rem] grid grid-cols-1 md:grid-cols-3 gap-10 ">
+        <div className=" mt-4 md:mt-[2rem] text-[0.8rem] md:text-[1rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
           <div className=" flex flex-col justify-center items-center p-2 shadow-[0px_0px_1px_0px] rounded-2xl ">
-            <img src="/softwear.png" alt="" className="w-[15rem]" />
+            <img src="/softwear.png" alt="" className="w-[12rem]" />
             <h1 className=" text-xl font-semibold mt-2 mb-2">
               Software Development
             </h1>
@@ -53,7 +71,7 @@ function About() {
           </div>
 
           <div className=" flex flex-col justify-center items-center p-2 shadow-[0px_0px_1px_0px] rounded-2xl ">
-            <img src="/frontend.png" alt="" className="w-[15rem]" />
+            <img src="/frontend.png" alt="" className="w-[12rem]" />
             <h1 className=" text-xl font-semibold mt-2 mb-2">
               Frontend Development
             </h1>
@@ -66,7 +84,7 @@ function About() {
           </div>
 
           <div className=" flex flex-col justify-center items-center p-2 shadow-[0px_0px_1px_0px] rounded-2xl ">
-            <img src="/backend.png" alt="" className="w-[15rem]" />
+            <img src="/backend.png" alt="" className="w-[12rem]" />
             <h1 className="text-xl font-semibold mt-2 mb-2">
               Backend Development
             </h1>
